@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <script src="./jquery.js"></script>
+  <!--<script src="http://127.0.0.1:3000/jquery.js"></script>-->
+</head>
+<body>
+  <h1>index site</h1>
+  <ul>
+    <li>123</li>
+    <li>456</li>
+  </ul>  <script>
+    //  $.ajax({
+    //    'url':"/getData?name=123",
+    //    'type':"GET",
+    //    'dataType':'json',
+    //    'success':function(data){
+    //      console.log(data);
+    //      alert(data);
+    
+    // }});
+    $.ajax({
+       'url':"/getData",
+       'type':"POST",
+       'data': { "name": "John", "test": "foo" },
+       'dataType':'json',
+       'success':function(data){
+         console.log(data);
+    
+     }});
+     
+  </script>
+</body>
+</html>
